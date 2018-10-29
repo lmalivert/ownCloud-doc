@@ -1,0 +1,41 @@
+= ownCloud Quick Start Guide
+:title-separator: ::
+
+Installing, Configuring, and Connecting to the ownCloud Server
+
+
+
+== Chapter 1. Should I Use This Guide?
+
+The Quick Start Guide enables you to install, configure, and use your ownCloud server based on a set of assumptions about your environment.
+
+You should use this guide if the following assumptions apply to your environment: +
+•	You are an administrator installing and configuring an ownCloud server on a local virtual environment OR you already have a virtual environment that can host the ownCloud server (a DHCP Server is recommended). +
+•	You are an administrator enabling users to connect to the ownCloud server using the server’s IP address and port 8080. +
+•	You are an administrator adding user accounts. +
+•	You are a user connecting to the ownCloud server via a desktop or mobile client. +
+
+Some of the tasks in this guide use example information. You should use values that are specific to your environment.
+
+If your environment does not fit with the first assumption, you can use the following resource to assist you with the installation of VirtualBox (a local virtual application):
+
+•	Visit the VirtualBox downloads page and select the appropriate package for your system under VirtualBox Platform packages.
+
+== Chapter 2. Installation and Configuration
+
+=== 2.1 System Requirements
+
+ownCloud includes the ownCloud server, which runs on the following Linux distributions:
+
+•	CentOS Linux 6 and 7 +
+•	Debian 7 and 8 +
+•	Fedora 27 and 28 +
+•	Red Hat Enterprise Linux 6 and 7 +
+•	SUSE Linux Enterprise Server 12 with SP1, SP2, and SP3
+•	openSUSE Tumbleweed and Leap 15.0, 42.3
+•	Ubuntu 16.04 and 18.04
+
+NOTE: For a detailed list of recommended and supported options, see System Requirements.
+
+=== 2.2 Installing ownCloud Server on Linux +
+There are 3 methods for deploying the ownCloud server. Select the best method that applies to your environment and click the link(s) for installation procedures:
