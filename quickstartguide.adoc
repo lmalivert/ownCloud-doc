@@ -191,9 +191,9 @@ The ownCloud desktop client enables you to keep your data synced and gives you a
 
 === 5.2 Connecting to the ownCloud Server Using a Mobile Device +
 
-These mobile apps enable you to access, sync, and upload your data on the run. Mobile apps are available in both the Apple Store and the Google Play Store.
+These mobile apps enable you to access, sync, and upload your data on the run. Mobile apps are available in both the link:https://itunes.apple.com/us/app/owncloud/id543672169?ls=1&mt=8[Apple Store] and the link:https://play.google.com/store/apps/details?id=com.owncloud.android[Google Play Store].
 
-.To connect to one of the following mobile devices, click the appropriate link and follow the download procedure:
+.To connect to one of the following mobile apps, click the appropriate link and follow the download procedure:
 
 - link:https://owncloud.org/download/#owncloud-mobile-apps-ios[iOS]
 - link:https://owncloud.org/download/#owncloud-mobile-apps-android[Android]
