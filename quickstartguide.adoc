@@ -1,5 +1,5 @@
 
-image::https://s24255.pcdn.co/wp-content/uploads/2015/04/OwnCloud.png[owncloud, 450, 550] 
+image::https://s24255.pcdn.co/wp-content/uploads/2015/04/OwnCloud.png[]
 
 = ownCloud: Quick Start Guide
 :toc: macro
