@@ -7,12 +7,16 @@ Installing, Configuring, and Connecting to the ownCloud Server
 
 == Chapter 1. Should I Use This Guide?
 
-The Quick Start Guide enables you to install, configure, and use your ownCloud server based on a set of assumptions about your environment.
+The Quick Start Guide enables you to install, configure, and use your ownCloud server based on a set of assumptions about you.
 
-You should use this guide if the following assumptions apply to your environment: +
-•	You are an administrator installing and configuring an ownCloud server on a local virtual environment OR you already have a virtual environment that can host the ownCloud server (a DHCP Server is recommended). +
-•	You are an administrator enabling users to connect to the ownCloud server using the server’s IP address and port 8080. +
-•	You are an administrator adding user accounts. +
+You should use this guide if the following assumptions apply to you:
+
+•	You are an administrator installing and configuring an ownCloud server on a local virtual environment OR you already have a virtual environment that can host the ownCloud server (a DHCP Server is recommended).
+
+•	You are an administrator enabling users to connect to the ownCloud server using the server’s IP address and port 8080.
+
+•	You are an administrator adding user accounts.
+
 •	You are a user connecting to the ownCloud server via a desktop or mobile client. +
 
 Some of the tasks in this guide use example information. You should use values that are specific to your environment.
@@ -35,7 +39,7 @@ ownCloud includes the ownCloud server, which runs on the following Linux distrib
 •	openSUSE Tumbleweed and Leap 15.0, 42.3
 •	Ubuntu 16.04 and 18.04
 
-NOTE: For a detailed list of recommended and supported options, see System Requirements.
+TIP: For a detailed list of recommended and supported options, see System Requirements.
 
 === 2.2 Installing ownCloud Server on Linux +
 There are 3 methods for deploying the ownCloud server. Select the best method that applies to your environment and click the link(s) for installation procedures:
@@ -44,7 +48,7 @@ There are 3 methods for deploying the ownCloud server. Select the best method th
 .  *ownCloud X Server Appliance* (Recommended for testing) - For installation procedures, see link:https://oc.owncloud.com/rs/038-KRL-592/images/Whitepaper_User_Guide_Applicance_ENG.pdf[Setting up Your ownCloud]. For additional information, see link:https://doc.owncloud.com/server/latest/admin_manual/appliance/[ownCloud X Appliance Documentation].
 .  *Linux Package Manager* - For installation procedures, see link:https://doc.owncloud.org/server/10.0/admin_manual/installation/linux_installation.html[Linux Package Manager Installation].
 
-NOTE: This package is not recommended for production environments.
+WARNING: This package is not recommended for production environments.
 
 ==== 2.2.1 Installing and Configuring ownCloud on Centos 7 Linux Distribution +
 The following procedure explains how to manually install ownCloud server on Centos 7.
@@ -120,4 +124,34 @@ firewall-cmd --permanent --add-port=80/tcp && firewall-cmd –reload
 systemctl start httpd && systemctl enable httpd
 ----
 
-. Go to http://<ip address of the ownCloud server>/ownCloud and login with the default administrator credentials.  
+. In the web browser of your choice (e.g., Google Chrome, Internet Explorer, Firefox, etc.), enter the IP address of the ownCloud server and login with the default administrator credentials.
+
+TIP: The default administrator credentials are _Administrator_ and the root password.
+
+== Chapter 3. Connecting Users to the ownCloud Server
+
+=== 3.1 Enabling Users to Connect to the ownCloud Server +
+The following procedure explains how to enable user to connect to the ownCloud server using the server's IP address and port 8080. +
+
+.To Connect Users to the ownCloud Server Using the CLI
+. Configure the Apache service to listen on port 8080.
++
+----
+vi /etc/httpd/conf/httpd.conf and add the following line: Listen <ipaddress>:8080
+----
+
+. Open the firewall port 8080.
++
+----
+firewall-cmd --permanent --add-port=8080/tcp && firewall-cmd –reload
+----
+
+. Restart the Apache service.
++
+----
+systemctl restart httpd
+----
+
+. In the web browser of your choice (e.g., Google Chrome, Internet Explorer, Firefox, etc.), enter the IP address of the ownCloud server and login with the default administrator credentials.
+
+TIP: The default administrator credentials are _Administrator_ and the root password.
