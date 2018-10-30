@@ -155,3 +155,23 @@ systemctl restart httpd
 . In the web browser of your choice (e.g., Google Chrome, Internet Explorer, Firefox, etc.), enter the IP address of the ownCloud server and login with the default administrator credentials.
 
 TIP: The default administrator credentials are _Administrator_ and the root password.
+
+= Chapter 4. Adding a User Account to the ownCloud Server
+
+== Adding a User Account +
+The following procedure explains how to add a user account to the ownCloud server.
+
+.To Add a User Account Using the Web UI
+. Click the *Administrator* drop-down menu.
+. Select *Users*.
+. In the *Username* field, enter a username.
+. In the *E-Mail* field, enter a valid e-mail address.
+. Click *Create*.
+
+== Chapter 5. Connecting to the ownCloud Server Using External Devices
+
+ownCloud users can connect to their accounts using desktop clients and mobile devices.
+
+=== Connecting to the ownCloud Server Using a Desktop Client +
+
+.To connect to one of the following desktop clients, click the link and follow the download procedure:
