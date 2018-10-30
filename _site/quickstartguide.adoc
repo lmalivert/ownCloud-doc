@@ -1,0 +1,200 @@
+
+image::https://s24255.pcdn.co/wp-content/uploads/2015/04/OwnCloud.png[]
+
+= ownCloud: Quick Start Guide
+:toc: macro
+:title-separator: ::
+
+Installing, Configuring, and Connecting to the ownCloud Server
+
+[abstract]
+== Abstract
+The ownCloud Quick Start Guide is designed to help you quickly install, configure, and connect to an ownCloud server. This guide is aimed primarily at administrators and users.
+
+toc::[]
+
+== Chapter 1. Should I Use This Guide?
+
+The Quick Start Guide enables you to install, configure, and use your ownCloud server based on a set of assumptions about you.
+
+You should use this guide if the following assumptions apply to you:
+
+•	You are an administrator installing and configuring an ownCloud server on a local virtual environment OR you already have a virtual environment that can host the ownCloud server (a DHCP Server is recommended).
+
+•	You are an administrator enabling users to connect to the ownCloud server using the server’s IP address and port 8080.
+
+•	You are an administrator adding user accounts.
+
+•	You are a user connecting to the ownCloud server via a desktop or mobile client. +
+
+Some of the tasks in this guide use example information. You should use values that are specific to your environment.
+
+If your environment does not fit with the first assumption, you can use the following resource to assist you with the installation of VirtualBox (a local virtual application):
+
+•	Visit the link:https://www.virtualbox.org/wiki/Downloads[VirtualBox] downloads page and select the appropriate package for your system under VirtualBox Platform packages.
+
+== Chapter 2. Installation and Configuration
+
+=== 2.1 System Requirements
+
+ownCloud includes the ownCloud server, which runs on the following Linux distributions:
+
+•	CentOS Linux 6 and 7 +
+•	Debian 7 and 8 +
+•	Fedora 27 and 28 +
+•	Red Hat Enterprise Linux 6 and 7 +
+•	SUSE Linux Enterprise Server 12 with SP1, SP2, and SP3
+•	openSUSE Tumbleweed and Leap 15.0, 42.3
+•	Ubuntu 16.04 and 18.04
+
+TIP: For a detailed list of recommended and supported options, see System Requirements.
+
+=== 2.2 Installing ownCloud Server on Linux +
+There are 3 methods for deploying the ownCloud server. Select the best method that applies to your environment and click the appropriate link for installation procedures:
+
+.  *Manual Installation on Linux* (Preferred Method) - For installation procedures, see link:https://doc.owncloud.org/server/10.0/admin_manual/installation/source_installation.html[Manual Installation on Linux].
+.  *ownCloud X Server Appliance* (Recommended for testing) - For installation procedures, see link:https://oc.owncloud.com/rs/038-KRL-592/images/Whitepaper_User_Guide_Applicance_ENG.pdf[Setting up Your ownCloud]. For additional information, see link:https://doc.owncloud.com/server/latest/admin_manual/appliance/[ownCloud X Appliance Documentation].
+.  *Linux Package Manager* - For installation procedures, see link:https://doc.owncloud.org/server/10.0/admin_manual/installation/linux_installation.html[Linux Package Manager Installation].
+
+WARNING: This package is not recommended for production environments.
+
+==== 2.2.1 Installing and Configuring ownCloud on Centos 7 Linux Distribution +
+The following procedure explains how to manually install ownCloud server on Centos 7.
+
+.To install and configure ownCloud on Centos 7 Linux distribution
+
+.  Install the PHP prerequisite modules on the console.
++
+----
+yum install php72-php-pecl-zip php-xml *xmlwriter* php72-php-intl -y
+----
+
+.  Download the ownCloud-10.x.x.zip source file.
++
+----
+wget https://download.owncloud.org/community/owncloud-10.x.x.zip
+----
+
+. Extract the ownloud-10.x.x.zip source file.
++
+----
+unzip owncloud-10.0.10.zip
+----
+
+. Move the extracted directory into the Apache document directory
++
+----
+mv owncloud /var/www/
+----
+
+. Copy the ownCloud Apache configuration file from the *Manual Installation on Linux* page -> *Configure Apache Web Server* section.
++
+----
+vi /etc/httpd/conf.d/owncloud.conf:
+
+Alias /owncloud "/var/www/owncloud/"
+
+<Directory /var/www/owncloud/>
+  Options +FollowSymlinks
+  AllowOverride All
+
+ <IfModule mod_dav.c>
+  Dav off
+ </IfModule>
+
+ SetEnv HOME /var/www/owncloud
+ SetEnv HTTP_HOME /var/www/owncloud
+
+</Directory>
+----
+
+. If SELinux is enabled, set the correct context on the ownCloud Apache directory.
++
+----
+chcon --verbose --recursive --reference /var/www/html /var/www/owncloud
+----
+
+. Change ownership of Apache ownCloud directory to the Apache user.
++
+----
+chown -R apache:apache /var/www/owncloud/
+----
+
+. Open the firewall port for needed for ownCloud Http service.
++
+----
+firewall-cmd --permanent --add-port=80/tcp && firewall-cmd –reload
+----
+
+. Start and enable the Apache service.
++
+----
+systemctl start httpd && systemctl enable httpd
+----
+
+. In the web browser of your choice (e.g., Google Chrome, Internet Explorer, Firefox, etc.), enter the IP address of the ownCloud server and login with the default administrator credentials.
+
+TIP: The default administrator credentials are _Administrator_ and the root password.
+
+== Chapter 3. Connecting Users to the ownCloud Server
+
+=== 3.1 Enabling Users to Connect to the ownCloud Server +
+The following procedure explains how to enable a user to connect to the ownCloud server using the server's IP address and port 8080. +
+
+.To connect users to the ownCloud server using the CLI
+. Configure the Apache service to listen on port 8080.
++
+----
+vi /etc/httpd/conf/httpd.conf and add the following line: Listen <ipaddress>:8080
+----
+
+. Open the firewall port 8080.
++
+----
+firewall-cmd --permanent --add-port=8080/tcp && firewall-cmd –reload
+----
+
+. Restart the Apache service.
++
+----
+systemctl restart httpd
+----
+
+. In the web browser of your choice (e.g., Google Chrome, Internet Explorer, Firefox, etc.), enter the IP address of the ownCloud server and login with the default administrator credentials.
+
+TIP: The default administrator credentials are _Administrator_ and the root password.
+
+== Chapter 4. Adding a User Account to the ownCloud Server
+
+=== 4.1 Adding a User Account +
+The following procedure explains how to add a user account to the ownCloud server.
+
+.To add a user account using the web UI
+. Click the *Administrator* drop-down menu.
+. Select *Users*.
+. In the *Username* field, enter a username.
+. In the *E-Mail* field, enter a valid e-mail address.
+. Click *Create*.
+
+== Chapter 5. Connecting to the ownCloud Server Using External Devices
+
+As a user, you can connect to the ownCloud server using a desktop client or mobile device.
+
+=== 5.1 Connecting to the ownCloud Server Using a Desktop Client +
+
+The ownCloud desktop client enables you to keep your data synced and gives you access to the latest files wherever you are.
+
+.To connect to one of the following desktop clients, click the appropriate link and follow the download procedure:
+
+- link:https://owncloud.org/download/#owncloud-desktop-client-macos[ownCloud Desktop Client for MacOS]
+- link:https://owncloud.org/download/#owncloud-desktop-client-windows[ownCloud Desktop Client for Windows]
+- link:https://owncloud.org/download/#owncloud-desktop-client-linux[ownCloud Desktop Client for Linux]
+
+=== 5.2 Connecting to the ownCloud Server Using a Mobile Device +
+
+These mobile apps enable you to access, sync, and upload your data on the run. Mobile apps are available in both the link:https://itunes.apple.com/us/app/owncloud/id543672169?ls=1&mt=8[Apple Store] and the link:https://play.google.com/store/apps/details?id=com.owncloud.android[Google Play Store].
+
+.To connect to one of the following mobile apps, click the appropriate link and follow the download procedure:
+
+- link:https://owncloud.org/download/#owncloud-mobile-apps-ios[iOS]
+- link:https://owncloud.org/download/#owncloud-mobile-apps-android[Android]
