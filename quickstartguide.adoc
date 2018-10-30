@@ -101,3 +101,23 @@ Alias /owncloud "/var/www/owncloud/"
 ----
 chcon --verbose --recursive --reference /var/www/html /var/www/owncloud
 ----
+
+. Change ownership of Apache ownCloud directory to the Apache user.
++
+----
+chown -R apache:apache /var/www/owncloud/
+----
+
+. Open the firewall port for needed for ownCloud Http service.
++
+----
+firewall-cmd --permanent --add-port=80/tcp && firewall-cmd –reload
+----
+
+. Start and enable the Apache service.
++
+----
+systemctl start httpd && systemctl enable httpd
+----
+
+. Go to http://<ip address of the ownCloud server>/ownCloud and login with the default administrator credentials.  
