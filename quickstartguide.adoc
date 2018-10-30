@@ -1,4 +1,4 @@
-image::https://s24255.pcdn.co/wp-content/uploads/2015/04/OwnCloud.png[] 
+image::https://s24255.pcdn.co/wp-content/uploads/2015/04/OwnCloud.png[]
 
 = ownCloud: Quick Start Guide
 :toc: macro
@@ -138,7 +138,7 @@ TIP: The default administrator credentials are _Administrator_ and the root pass
 == Chapter 3. Connecting Users to the ownCloud Server
 
 === 3.1 Enabling Users to Connect to the ownCloud Server +
-The following procedure explains how to enable user to connect to the ownCloud server using the server's IP address and port 8080. +
+The following procedure explains how to enable a user to connect to the ownCloud server using the server's IP address and port 8080. +
 
 .To connect users to the ownCloud server using the CLI
 . Configure the Apache service to listen on port 8080.
@@ -177,7 +177,7 @@ The following procedure explains how to add a user account to the ownCloud serve
 
 == Chapter 5. Connecting to the ownCloud Server Using External Devices
 
-ownCloud users can connect to their accounts using desktop clients and mobile devices.
+As a user, you can connect to your ownCloud account using a desktop client or mobile device.
 
 === 5.1 Connecting to the ownCloud Server Using a Desktop Client +
 
