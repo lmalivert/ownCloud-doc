@@ -177,7 +177,7 @@ The following procedure explains how to add a user account to the ownCloud serve
 
 == Chapter 5. Connecting to the ownCloud Server Using External Devices
 
-As a user, you can connect to your ownCloud account using a desktop client or mobile device.
+As a user, you can connect to the ownCloud server using a desktop client or mobile device.
 
 === 5.1 Connecting to the ownCloud Server Using a Desktop Client +
 
