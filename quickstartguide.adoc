@@ -1,3 +1,5 @@
+image::https://s24255.pcdn.co/wp-content/uploads/2015/04/OwnCloud.png[] 
+
 = ownCloud: Quick Start Guide
 :toc: macro
 :title-separator: ::
@@ -161,9 +163,9 @@ systemctl restart httpd
 
 TIP: The default administrator credentials are _Administrator_ and the root password.
 
-= Chapter 4. Adding a User Account to the ownCloud Server
+== Chapter 4. Adding a User Account to the ownCloud Server
 
-== 4.1 Adding a User Account +
+=== 4.1 Adding a User Account +
 The following procedure explains how to add a user account to the ownCloud server.
 
 .To add a user account using the web UI
@@ -173,7 +175,7 @@ The following procedure explains how to add a user account to the ownCloud serve
 . In the *E-Mail* field, enter a valid e-mail address.
 . Click *Create*.
 
-= Chapter 5. Connecting to the ownCloud Server Using External Devices
+== Chapter 5. Connecting to the ownCloud Server Using External Devices
 
 ownCloud users can connect to their accounts using desktop clients and mobile devices.
 
