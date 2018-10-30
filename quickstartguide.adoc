@@ -1,4 +1,7 @@
-image::https://s24255.pcdn.co/wp-content/uploads/2015/04/OwnCloud.png[]
+:imagesdir: /Users/lydiemalivert/Documents/owncloud/ownCloud-doc/images
+
+
+image::owncloud.png[owncloud, 468, 480, align="left"]
 
 = ownCloud: Quick Start Guide
 :toc: macro
