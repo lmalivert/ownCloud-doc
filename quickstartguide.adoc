@@ -49,7 +49,7 @@ ownCloud includes the ownCloud server, which runs on the following Linux distrib
 TIP: For a detailed list of recommended and supported options, see System Requirements.
 
 === 2.2 Installing ownCloud Server on Linux +
-There are 3 methods for deploying the ownCloud server. Select the best method that applies to your environment and click the link(s) for installation procedures:
+There are 3 methods for deploying the ownCloud server. Select the best method that applies to your environment and click the appropriate link for installation procedures:
 
 .  *Manual Installation on Linux* (Preferred Method) - For installation procedures, see link:https://doc.owncloud.org/server/10.0/admin_manual/installation/source_installation.html[Manual Installation on Linux].
 .  *ownCloud X Server Appliance* (Recommended for testing) - For installation procedures, see link:https://oc.owncloud.com/rs/038-KRL-592/images/Whitepaper_User_Guide_Applicance_ENG.pdf[Setting up Your ownCloud]. For additional information, see link:https://doc.owncloud.com/server/latest/admin_manual/appliance/[ownCloud X Appliance Documentation].
@@ -181,8 +181,9 @@ As a user, you can connect to the ownCloud server using a desktop client or mobi
 
 === 5.1 Connecting to the ownCloud Server Using a Desktop Client +
 
-.To connect to one of the following desktop clients, click the link and follow the download procedure:
 The ownCloud desktop client enables you to keep your data synced and gives you access to the latest files wherever you are.
+
+.To connect to one of the following desktop clients, click the appropriate link and follow the download procedure:
 
 - link:https://owncloud.org/download/#owncloud-desktop-client-macos[ownCloud Desktop Client for MacOS]
 - link:https://owncloud.org/download/#owncloud-desktop-client-windows[ownCloud Desktop Client for Windows]
@@ -190,8 +191,9 @@ The ownCloud desktop client enables you to keep your data synced and gives you a
 
 === 5.2 Connecting to the ownCloud Server Using a Mobile Device +
 
-.To connect to one of the following mobile devices, click the link and follow the download procedure:
 These mobile apps enable you to access, sync, and upload your data on the run. Mobile apps are available in both the Apple Store and the Google Play Store.
+
+.To connect to one of the following mobile devices, click the appropriate link and follow the download procedure:
 
 - link:https://owncloud.org/download/#owncloud-mobile-apps-ios[iOS]
 - link:https://owncloud.org/download/#owncloud-mobile-apps-android[Android]
