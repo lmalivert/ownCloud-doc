@@ -1,9 +1,14 @@
-= ownCloud Quick Start Guide
+= ownCloud: Quick Start Guide
+:toc: macro
 :title-separator: ::
 
 Installing, Configuring, and Connecting to the ownCloud Server
 
+[abstract]
+== Abstract
+The ownCloud Quick Start Guide is designed to help you quickly install, configure, and connect to an ownCloud server. This guide is aimed primarily at administrators and users.
 
+toc::[]
 
 == Chapter 1. Should I Use This Guide?
 
@@ -53,7 +58,7 @@ WARNING: This package is not recommended for production environments.
 ==== 2.2.1 Installing and Configuring ownCloud on Centos 7 Linux Distribution +
 The following procedure explains how to manually install ownCloud server on Centos 7.
 
-.To Install and Configure ownCloud on Centos 7 Linux Distribution
+.To install and configure ownCloud on Centos 7 Linux distribution
 
 .  Install the PHP prerequisite modules on the console.
 +
@@ -133,7 +138,7 @@ TIP: The default administrator credentials are _Administrator_ and the root pass
 === 3.1 Enabling Users to Connect to the ownCloud Server +
 The following procedure explains how to enable user to connect to the ownCloud server using the server's IP address and port 8080. +
 
-.To Connect Users to the ownCloud Server Using the CLI
+.To connect users to the ownCloud server using the CLI
 . Configure the Apache service to listen on port 8080.
 +
 ----
@@ -161,7 +166,7 @@ TIP: The default administrator credentials are _Administrator_ and the root pass
 == 4.1 Adding a User Account +
 The following procedure explains how to add a user account to the ownCloud server.
 
-.To Add a User Account Using the Web UI
+.To add a user account using the web UI
 . Click the *Administrator* drop-down menu.
 . Select *Users*.
 . In the *Username* field, enter a username.
@@ -175,6 +180,8 @@ ownCloud users can connect to their accounts using desktop clients and mobile de
 === 5.1 Connecting to the ownCloud Server Using a Desktop Client +
 
 .To connect to one of the following desktop clients, click the link and follow the download procedure:
+The ownCloud desktop client enables you to keep your data synced and gives you access to the latest files wherever you are.
+
 - link:https://owncloud.org/download/#owncloud-desktop-client-macos[ownCloud Desktop Client for MacOS]
 - link:https://owncloud.org/download/#owncloud-desktop-client-windows[ownCloud Desktop Client for Windows]
 - link:https://owncloud.org/download/#owncloud-desktop-client-linux[ownCloud Desktop Client for Linux]
@@ -182,5 +189,7 @@ ownCloud users can connect to their accounts using desktop clients and mobile de
 === 5.2 Connecting to the ownCloud Server Using a Mobile Device +
 
 .To connect to one of the following mobile devices, click the link and follow the download procedure:
+These mobile apps enable you to access, sync, and upload your data on the run. Mobile apps are available in both the Apple Store and the Google Play Store.
+
 - link:https://owncloud.org/download/#owncloud-mobile-apps-ios[iOS]
 - link:https://owncloud.org/download/#owncloud-mobile-apps-android[Android]
