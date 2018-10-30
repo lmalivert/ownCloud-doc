@@ -173,7 +173,7 @@ The following procedure explains how to add a user account to the ownCloud serve
 . In the *E-Mail* field, enter a valid e-mail address.
 . Click *Create*.
 
-== Chapter 5. Connecting to the ownCloud Server Using External Devices
+= Chapter 5. Connecting to the ownCloud Server Using External Devices
 
 ownCloud users can connect to their accounts using desktop clients and mobile devices.
 
