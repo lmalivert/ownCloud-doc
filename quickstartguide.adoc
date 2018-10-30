@@ -158,7 +158,7 @@ TIP: The default administrator credentials are _Administrator_ and the root pass
 
 = Chapter 4. Adding a User Account to the ownCloud Server
 
-== Adding a User Account +
+== 4.1 Adding a User Account +
 The following procedure explains how to add a user account to the ownCloud server.
 
 .To Add a User Account Using the Web UI
@@ -172,6 +172,15 @@ The following procedure explains how to add a user account to the ownCloud serve
 
 ownCloud users can connect to their accounts using desktop clients and mobile devices.
 
-=== Connecting to the ownCloud Server Using a Desktop Client +
+=== 5.1 Connecting to the ownCloud Server Using a Desktop Client +
 
 .To connect to one of the following desktop clients, click the link and follow the download procedure:
+- link:https://owncloud.org/download/#owncloud-desktop-client-macos[ownCloud Desktop Client for MacOS]
+- link:https://owncloud.org/download/#owncloud-desktop-client-windows[ownCloud Desktop Client for Windows]
+- link:https://owncloud.org/download/#owncloud-desktop-client-linux[ownCloud Desktop Client for Linux]
+
+=== 5.2 Connecting to the ownCloud Server Using a Mobile Device +
+
+.To connect to one of the following mobile devices, click the link and follow the download procedure:
+- link:https://owncloud.org/download/#owncloud-mobile-apps-ios[iOS]
+- link:https://owncloud.org/download/#owncloud-mobile-apps-android[Android]
