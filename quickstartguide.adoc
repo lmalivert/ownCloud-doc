@@ -19,7 +19,7 @@ Some of the tasks in this guide use example information. You should use values t
 
 If your environment does not fit with the first assumption, you can use the following resource to assist you with the installation of VirtualBox (a local virtual application):
 
-•	Visit the VirtualBox downloads page and select the appropriate package for your system under VirtualBox Platform packages.
+•	Visit the link:https://www.virtualbox.org/wiki/Downloads[VirtualBox] downloads page and select the appropriate package for your system under VirtualBox Platform packages.
 
 == Chapter 2. Installation and Configuration
 
@@ -39,3 +39,12 @@ NOTE: For a detailed list of recommended and supported options, see System Requi
 
 === 2.2 Installing ownCloud Server on Linux +
 There are 3 methods for deploying the ownCloud server. Select the best method that applies to your environment and click the link(s) for installation procedures:
+
+.  *Manual Installation on Linux* (Preferred Method) - For installation procedures, see link:https://doc.owncloud.org/server/10.0/admin_manual/installation/source_installation.html[Manual Installation on Linux].
+.  *ownCloud X Server Appliance* (Recommended for testing) - For installation procedures, see link:https://oc.owncloud.com/rs/038-KRL-592/images/Whitepaper_User_Guide_Applicance_ENG.pdf[Setting up Your ownCloud]. For additional information, see link:https://doc.owncloud.com/server/latest/admin_manual/appliance/[ownCloud X Appliance Documentation].
+.  *Linux Package Manager* - For installation procedures, see link:https://doc.owncloud.org/server/10.0/admin_manual/installation/linux_installation.html[Linux Package Manager Installation].
+
+NOTE: This package is not recommended for production environments.
+
+==== 2.2.1 Installing and Configuring ownCloud on Centos 7 Linux Distribution +
+The following procedure explains how to manually install ownCloud server on Centos 7.
