@@ -48,3 +48,56 @@ NOTE: This package is not recommended for production environments.
 
 ==== 2.2.1 Installing and Configuring ownCloud on Centos 7 Linux Distribution +
 The following procedure explains how to manually install ownCloud server on Centos 7.
+
+.To Install and Configure ownCloud on Centos 7 Linux Distribution
+
+.  Install the PHP prerequisite modules on the console.
++
+----
+yum install php72-php-pecl-zip php-xml *xmlwriter* php72-php-intl -y
+----
+
+.  Download the ownCloud-10.x.x.zip source file.
++
+----
+wget https://download.owncloud.org/community/owncloud-10.x.x.zip
+----
+
+. Extract the ownloud-10.x.x.zip source file.
++
+----
+unzip owncloud-10.0.10.zip
+----
+
+. Move the extracted directory into the Apache document directory
++
+----
+mv owncloud /var/www/
+----
+
+. Copy the ownCloud Apache configuration file from the *Manual Installation on Linux* page -> *Configure Apache Web Server* section.
++
+----
+vi /etc/httpd/conf.d/owncloud.conf:
+
+Alias /owncloud "/var/www/owncloud/"
+
+<Directory /var/www/owncloud/>
+  Options +FollowSymlinks
+  AllowOverride All
+
+ <IfModule mod_dav.c>
+  Dav off
+ </IfModule>
+
+ SetEnv HOME /var/www/owncloud
+ SetEnv HTTP_HOME /var/www/owncloud
+
+</Directory>
+----
+
+. If SELinux is enabled, set the correct context on the ownCloud Apache directory.
++
+----
+chcon --verbose --recursive --reference /var/www/html /var/www/owncloud
+----
